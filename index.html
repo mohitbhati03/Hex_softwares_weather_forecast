@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="weather-app">
+      <div class="weather-result glass">
+        <h2 class="app-title">Weather Now</h2>
+        <div class="search-box">
+          <input
+            type="text"
+            id="locationInput"
+            placeholder="Enter city..."
+            autocomplete="off"
+          />
+          <button id="searchButton">🔍</button>
+        </div>
+        <div class="weather-icon" id="weatherIcon"></div>
+        <div class="weather-info">
+          <h3 id="location"></h3>
+          <div class="temp" id="temperature"></div>
+          <div class="desc" id="description"></div>
+          <div class="extra-info">
+            <span id="humidity"></span> |
+            <span id="wind"></span>
+          </div>
+        </div>
+      </div>
+      <div class="forecast glass" id="forecast">
+        <h4>5-Day Forecast</h4>
+        <div class="forecast-list-box">
+          <div class="forecast-list" id="forecastList"></div>
+        </div>
+        <div class="forecast-graph-box">
+          <canvas id="forecastChart"></canvas>
+        </div>
+      </div>
+      <footer>
+        <span>Powered by OpenWeatherMap</span>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
